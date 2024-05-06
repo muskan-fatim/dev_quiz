@@ -2,7 +2,6 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 let total = 0;
-let condition = true;
 let q1 = "Tim Berners lee";
 let q2 = "Nexus";
 let q3 = "Hyber text markup language";
@@ -13,7 +12,6 @@ let q7 = "Es2020";
 let q8 = "??";
 let q9 = "&nbsp;";
 let q10 = "Document object model";
-while (condition) {
     let start = await inquirer.prompt([{
             name: "start",
             type: "input",
@@ -143,10 +141,4 @@ while (condition) {
         console.log(chalk.red("wrong answer correct answer is" + " " + q10));
     }
     console.log(chalk.yellow("your total point is 10/" + total));
-    let again = await inquirer.prompt([{
-            name: "gain",
-            type: "confirm",
-            message: "you want to try again"
-        }]);
-    condition = again.gain;
-}
+    
